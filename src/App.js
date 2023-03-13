@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactGA from "react-ga";
 import $ from "jquery";
 import "./App.css";
-import { Routes,Route} from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home.js"
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -25,9 +25,6 @@ class App extends Component {
     ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
   }
-  handleNavigate = () => {
-    history.push('/passport');
-  }
 
   render() {
     return (
@@ -42,52 +39,43 @@ class App extends Component {
 
           <ul id="nav" className="nav">
             <li className="current">
-            <button className="smoothscroll" onClick={()=>history.push('/')}>
-                Home
-              </button>
+              <Link to="/">Home</Link>
             </li>
 
             <li>
-              <button className="smoothscroll" onClick={()=>history.push('/passport')}>
-               Passport Photo Creation
-              </button>
+              <Link to="/passport">Passport Photo Creation</Link>
             </li>
 
             <li>
-            <button className="smoothscroll" onClick={this.handleNavigate}>
-                Photo Resize & Crop
-              </button>
+              <Link to="/photoresizeandcrop">Photo Resize & Crop</Link>
             </li>
 
             <li>
-            <button className="smoothscroll" onClick={this.handleNavigate}>
-                Photo Collage
-              </button>
+              <Link to="/photocollage">Photo Collage</Link>
             </li>
 
             <li>
-            <button className="smoothscroll" onClick={this.handleNavigate}>
-                Noise Removal
-              </button>
+              <Link to="/noiseremoval">Noise Removal</Link>
             </li>
 
             <li>
-            <button className="smoothscroll" onClick={this.handleNavigate}>
-                Image Format Conversion
-              </button>
+              <Link to="/imageformatconversion">Image Format Conversion</Link>
             </li>
 
             <li>
-            <button className="smoothscroll" onClick={this.handleNavigate}>
-                Brightness & Contrast
-              </button>
+              <Link to="/brightnessandcontrast">Brightness & Contrast</Link>
             </li>
           </ul>
         </nav>
         <Routes>
-      <Route path="/" Component={Home } />
-      <Route path="/passport" Component={Passport } />
-      </Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/passport" element={<Passport />} />
+          <Route path="/photoresizeandcrop" element={<PhotoResizeAndCrop />} />
+          <Route path="/photocollage" element={<PhotoCollage />} />
+          <Route path="/noiseremoval" element={<NoiseRemoval />} />
+          <Route path="/imageformatconversion" element={<ImageFormatter />} />
+          <Route path="/brightnessandcontrast" element={<BrightnessAndContrast />} />
+        </Routes>
       </div>
     );
   }

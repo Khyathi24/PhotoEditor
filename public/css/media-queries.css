@@ -1,19 +1,6 @@
-/* ==================================================================
 
-*   Ceevee Media Queries
-*   url: styleshout.com
-*   03-18-2014
-
-/* ================================================================== */
-
-
-/* screenwidth less than 1024px
---------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
-
-    /* header styles
-   ------------------------------------------------------------------ */
-   header .banner-text h1 {
+ header .banner-text h1 {
       font: 80px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
@@ -21,12 +8,10 @@
 
 }
 
-/* screenwidth less than 900px
---------------------------------------------------------------------- */
+
 @media only screen and (max-width: 900px) {
 
-    /* header styles
-   ------------------------------------------------------------------ */
+   
    header .banner { padding-bottom: 12px; }
    header .banner-text h1 {
       font: 78px/1.1em 'opensans-bold', sans-serif;
