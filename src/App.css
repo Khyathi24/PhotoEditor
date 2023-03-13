@@ -1,0 +1,41 @@
+.background{
+    background-image:url('UB.png') !important;
+    background-repeat: no-repeat;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  
+  .content {
+    padding: 0 0px;
+  }
+  .ant-card-hoverable:hover {
+    background-color: #efeded;
+  }
+  .class1{
+    background-color: #efeded;
+  }
+  .class2{
+    background-color: black;
+  }
+  
